@@ -12,11 +12,6 @@ def get_dataloaders(batch_size=128):
         transforms.RandomHorizontalFlip(),
         transforms.RandomCrop(32, padding=4),
         transforms.ToTensor(),
-        transforms.RandomErasing(
-            p=0.25,
-            scale=(0.02, 0.2),
-            ratio=(0.3, 3.3)
-        ),
         transforms.Normalize(CIFAR10_MEAN, CIFAR10_STD),
     ])
     eval_transform = transforms.Compose([

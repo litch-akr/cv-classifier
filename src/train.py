@@ -55,7 +55,7 @@ def main():
         step_size=5,
         gamma=0.1
     )
-    epochs = 20
+    epochs = 10
     best_val_acc = 0.0
     for epoch in range(epochs):
         train_loss,train_acc = train_one_epoch(
