@@ -7,15 +7,18 @@ CIFAR10_MEAN = (0.4914, 0.4822, 0.4465)
 CIFAR10_STD = (0.2470, 0.2435, 0.2616)
 
 
-def get_dataloaders(batch_size=64):
-
+def get_dataloaders(batch_size=128):
     train_transform = transforms.Compose([
         transforms.RandomHorizontalFlip(),
         transforms.RandomCrop(32, padding=4),
         transforms.ToTensor(),
+        transforms.RandomErasing(
+            p=0.25,
+            scale=(0.02, 0.2),
+            ratio=(0.3, 3.3)
+        ),
         transforms.Normalize(CIFAR10_MEAN, CIFAR10_STD),
     ])
-
     eval_transform = transforms.Compose([
         transforms.ToTensor(),
         transforms.Normalize(CIFAR10_MEAN, CIFAR10_STD),
@@ -60,21 +63,24 @@ def get_dataloaders(batch_size=64):
         train_dataset,
         batch_size=batch_size,
         shuffle=True,
-        num_workers=2,
+        num_workers=0,
+        pin_memory=True,
     )
 
     val_loader = DataLoader(
         val_dataset,
         batch_size=batch_size,
         shuffle=False,
-        num_workers=2,
+        num_workers=0,
+        pin_memory=True,
     )
 
     test_loader = DataLoader(
         test_dataset,
         batch_size=batch_size,
         shuffle=False,
-        num_workers=2,
+        num_workers=0,
+        pin_memory=True,
     )
 
     return train_loader, val_loader, test_loader

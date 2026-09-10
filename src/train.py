@@ -42,6 +42,7 @@ def main():
     device = torch.device(
         "cuda" if torch.cuda.is_available() else "cpu"
     )
+
     train_loader, val_loader, test_loader = get_dataloaders()
     model = CIFARClassifier().to(device)
     criterion = nn.CrossEntropyLoss()
@@ -49,7 +50,12 @@ def main():
         model.parameters(),
         lr=1e-3
     )
-    epochs = 10
+    scheduler = optim.lr_scheduler.StepLR(
+        optimizer,
+        step_size=5,
+        gamma=0.1
+    )
+    epochs = 20
     best_val_acc = 0.0
     for epoch in range(epochs):
         train_loss,train_acc = train_one_epoch(
@@ -70,8 +76,10 @@ def main():
             f"Train Loss: {train_loss:.4f} "
             f"Train Acc: {train_acc:.2%} "
             f"Val Loss: {val_loss:.4f} "
-            f"Val Acc: {val_acc:.2%}"
+            f"Val Acc: {val_acc:.2%}",
+            f"Learning Rate: {optimizer.param_groups[0]['lr']:.6f}"
         )
+        scheduler.step()
         if val_acc > best_val_acc:
             best_val_acc = val_acc
             torch.save({
