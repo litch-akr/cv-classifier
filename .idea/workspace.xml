@@ -4,13 +4,7 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9934fd88-d51f-411a-8e84-c93904dc7b18" name="Changes" comment="created a simple cnn next step:experimenting">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/dataset.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/dataset.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/model.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/train.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/train.py" afterDir="false" />
-    </list>
+    <list default="true" id="9934fd88-d51f-411a-8e84-c93904dc7b18" name="Changes" comment="finished experimenting on simple cnn" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -44,6 +38,65 @@
   <component name="McpProjectServerCommands">
     <commands />
     <urls />
+  </component>
+  <component name="NextEditCompletionFeaturesState">
+    <decayedCancelled>
+      <entry key="MS100" value="1.3463008695735375" />
+      <entry key="MS500" value="2.912023360615332" />
+      <entry key="S2" value="5.80901585629508" />
+      <entry key="S5" value="11.534452396009115" />
+      <entry key="S10" value="19.127411685142135" />
+      <entry key="S30" value="32.358467544736556" />
+      <entry key="S60" value="48.31727096432017" />
+      <entry key="M2" value="72.04453584660233" />
+      <entry key="M5" value="99.98897333526227" />
+      <entry key="M10" value="113.17976566762754" />
+      <entry key="M15" value="118.1360639142541" />
+      <entry key="M30" value="123.40272632964405" />
+      <entry key="H1" value="126.15871993618579" />
+      <entry key="H2" value="127.56852989992802" />
+      <entry key="H4" value="128.28153597700256" />
+      <entry key="D1" value="128.87987513699835" />
+      <entry key="W1" value="128.98282995409704" />
+    </decayedCancelled>
+    <decayedSelected>
+      <entry key="MS100" value="0.0" />
+      <entry key="MS500" value="0.0" />
+      <entry key="S2" value="0.0" />
+      <entry key="S5" value="0.0" />
+      <entry key="S10" value="0.0" />
+      <entry key="S30" value="0.0" />
+      <entry key="S60" value="0.0" />
+      <entry key="M2" value="0.0" />
+      <entry key="M5" value="0.0" />
+      <entry key="M10" value="0.0" />
+      <entry key="M15" value="0.0" />
+      <entry key="M30" value="0.0" />
+      <entry key="H1" value="0.0" />
+      <entry key="H2" value="0.0" />
+      <entry key="H4" value="0.0" />
+      <entry key="D1" value="0.0" />
+      <entry key="W1" value="0.0" />
+    </decayedSelected>
+    <decayedShown>
+      <entry key="MS100" value="1.2797654348997065" />
+      <entry key="MS500" value="2.886149734952022" />
+      <entry key="S2" value="5.796341869534057" />
+      <entry key="S5" value="11.524462826990101" />
+      <entry key="S10" value="19.119174643714825" />
+      <entry key="S30" value="32.35377531621655" />
+      <entry key="S60" value="48.313618757424884" />
+      <entry key="M2" value="72.04171135257995" />
+      <entry key="M5" value="99.98736938008336" />
+      <entry key="M10" value="113.1788514660472" />
+      <entry key="M15" value="118.13542631196964" />
+      <entry key="M30" value="123.40239257437501" />
+      <entry key="H1" value="126.15854914474681" />
+      <entry key="H2" value="127.56844350302659" />
+      <entry key="H4" value="128.28149252536184" />
+      <entry key="D1" value="128.87986785964475" />
+      <entry key="W1" value="128.98282891360446" />
+    </decayedShown>
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 3,
@@ -97,7 +150,7 @@
       <workItem from="1788746075585" duration="5916000" />
       <workItem from="1788915385541" duration="8810000" />
       <workItem from="1789004649466" duration="10820000" />
-      <workItem from="1789037955692" duration="1433000" />
+      <workItem from="1789037955692" duration="1790000" />
     </task>
     <task id="LOCAL-00001" summary="init project">
       <option name="closed" value="true" />
@@ -115,7 +168,23 @@
       <option name="project" value="LOCAL" />
       <updated>1788946005566</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="finished experimenting on simple cnn">
+      <option name="closed" value="true" />
+      <created>1789040559005</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1789040559005</updated>
+    </task>
+    <task id="LOCAL-00004" summary="finished experimenting on simple cnn">
+      <option name="closed" value="true" />
+      <created>1789040846124</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1789040846124</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -135,7 +204,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="init project" />
     <MESSAGE value="created a simple cnn next step:experimenting" />
-    <option name="LAST_COMMIT_MESSAGE" value="created a simple cnn next step:experimenting" />
+    <MESSAGE value="finished experimenting on simple cnn" />
+    <option name="LAST_COMMIT_MESSAGE" value="finished experimenting on simple cnn" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/cv_classifier$model.coverage" NAME="model Coverage Results" MODIFIED="1789029860300" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />

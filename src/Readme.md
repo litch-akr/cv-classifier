@@ -59,18 +59,6 @@ The following named experiments evaluate the impact of learning rate scheduling,
   - Architecture: 2 Conv Blocks (3 $\rightarrow$ 32 $\rightarrow$ 64) + 2 Linear Layers
   - Optimizer: Adam (`lr=1e-3`), constant learning rate
   - Batch Size: 128, Epochs: 10
-- **Progression Logs**:
-  ```
-  Epoch [2/10]  Train Loss: 1.1486  Train Acc: 58.69%  Val Loss: 0.9673  Val Acc: 65.80%
-  Epoch [3/10]  Train Loss: 1.0154  Train Acc: 63.87%  Val Loss: 0.9029  Val Acc: 67.62%
-  Epoch [4/10]  Train Loss: 0.9251  Train Acc: 67.27%  Val Loss: 0.8269  Val Acc: 71.10%
-  Epoch [5/10]  Train Loss: 0.8590  Train Acc: 69.54%  Val Loss: 0.7727  Val Acc: 72.68%
-  Epoch [6/10]  Train Loss: 0.8029  Train Acc: 71.79%  Val Loss: 0.7490  Val Acc: 73.80%
-  Epoch [7/10]  Train Loss: 0.7642  Train Acc: 73.15%  Val Loss: 0.7732  Val Acc: 73.36%
-  Epoch [8/10]  Train Loss: 0.7335  Train Acc: 74.23%  Val Loss: 0.7600  Val Acc: 73.70%
-  Epoch [9/10]  Train Loss: 0.7058  Train Acc: 75.32%  Val Loss: 0.7173  Val Acc: 75.18%
-  Epoch [10/10] Train Loss: 0.6821  Train Acc: 76.23%  Val Loss: 0.7254  Val Acc: 74.66%
-  ```
 - **Outcome**: Achieved **75.18%** validation accuracy at Epoch 9. Mild signs of overfitting observed around epochs 6–7 as validation loss plateaued.
 
 ---
@@ -81,18 +69,6 @@ The following named experiments evaluate the impact of learning rate scheduling,
   - Architecture: 2 Conv Blocks (3 $\rightarrow$ 32 $\rightarrow$ 64)
   - Optimizer: Adam (`lr=1e-3`), StepLR scheduler
   - Batch Size: 128, Epochs: 10
-- **Progression Logs**:
-  ```
-  Epoch [2/10]  Train Loss: 1.1460  Train Acc: 59.08%  Val Loss: 0.9966  Val Acc: 64.78%  LR: 0.001000
-  Epoch [3/10]  Train Loss: 1.0132  Train Acc: 64.13%  Val Loss: 0.9212  Val Acc: 68.08%  LR: 0.001000
-  Epoch [4/10]  Train Loss: 0.9255  Train Acc: 67.12%  Val Loss: 0.8353  Val Acc: 71.06%  LR: 0.001000
-  Epoch [5/10]  Train Loss: 0.8661  Train Acc: 69.42%  Val Loss: 0.8042  Val Acc: 70.92%  LR: 0.001000
-  Epoch [6/10]  Train Loss: 0.7451  Train Acc: 73.71%  Val Loss: 0.7165  Val Acc: 74.78%  LR: 0.000100
-  Epoch [7/10]  Train Loss: 0.7195  Train Acc: 74.76%  Val Loss: 0.7103  Val Acc: 74.56%  LR: 0.000100
-  Epoch [8/10]  Train Loss: 0.7045  Train Acc: 75.26%  Val Loss: 0.6911  Val Acc: 76.04%  LR: 0.000100
-  Epoch [9/10]  Train Loss: 0.6941  Train Acc: 75.67%  Val Loss: 0.6898  Val Acc: 75.64%  LR: 0.000100
-  Epoch [10/10] Train Loss: 0.6863  Train Acc: 75.93%  Val Loss: 0.6807  Val Acc: 76.12%  LR: 0.000100
-  ```
 - **Outcome**: Best overall performance achieved (**76.12%** at Epoch 10). LR reduction allowed finer convergence and reduced validation loss to 0.6807.
 
 ---
@@ -103,17 +79,6 @@ The following named experiments evaluate the impact of learning rate scheduling,
   - Architecture: 2 Conv Blocks (3 $\rightarrow$ 32 $\rightarrow$ 64)
   - Optimizer: Adam (`lr=1e-3`), StepLR (`step_size=5, gamma=0.1`)
   - Batch Size: 128, Epochs: 20
-- **Progression Logs**:
-  ```
-  Epoch [1/20]  Train Loss: 1.6086  Train Acc: 41.33%  Val Loss: 1.2924  Val Acc: 53.92%  LR: 0.001000
-  Epoch [2/20]  Train Loss: 1.2701  Train Acc: 54.66%  Val Loss: 1.0971  Val Acc: 61.04%  LR: 0.001000
-  Epoch [5/20]  Train Loss: 0.9633  Train Acc: 65.80%  Val Loss: 0.9088  Val Acc: 67.68%  LR: 0.001000
-  Epoch [6/20]  Train Loss: 0.8733  Train Acc: 69.40%  Val Loss: 0.8122  Val Acc: 70.68%  LR: 0.000100
-  Epoch [10/20] Train Loss: 0.8212  Train Acc: 71.23%  Val Loss: 0.7776  Val Acc: 72.02%  LR: 0.000100
-  Epoch [11/20] Train Loss: 0.8084  Train Acc: 71.73%  Val Loss: 0.7749  Val Acc: 72.44%  LR: 0.000010
-  Epoch [14/20] Train Loss: 0.8051  Train Acc: 72.08%  Val Loss: 0.7709  Val Acc: 72.54%  LR: 0.000010
-  Epoch [20/20] Train Loss: 0.8017  Train Acc: 71.96%  Val Loss: 0.7701  Val Acc: 72.54%  LR: 0.000001
-  ```
 - **Outcome**: Best validation accuracy was **72.54%** at Epoch 14. Decaying learning rate too aggressively ($10^{-5}$ and $10^{-6}$) caused premature parameter freeze, preventing further optimization gains.
 
 ---
@@ -124,15 +89,6 @@ The following named experiments evaluate the impact of learning rate scheduling,
   - Architecture: 3 Conv Blocks (3 $\rightarrow$ 32 $\rightarrow$ 64 $\rightarrow$ 128)
   - Optimizer: Adam (`lr=1e-3`), StepLR (`step_size=5, gamma=0.1`)
   - Batch Size: 128, Epochs: 20
-- **Progression Logs**:
-  ```
-  Epoch [1/20]  Train Loss: 1.6478  Train Acc: 39.44%  Val Loss: 1.3462  Val Acc: 51.58%  LR: 0.001000
-  Epoch [5/20]  Train Loss: 0.9217  Train Acc: 67.52%  Val Loss: 0.8149  Val Acc: 70.74%  LR: 0.001000
-  Epoch [6/20]  Train Loss: 0.8079  Train Acc: 71.70%  Val Loss: 0.7555  Val Acc: 73.10%  LR: 0.000100
-  Epoch [10/20] Train Loss: 0.7527  Train Acc: 73.55%  Val Loss: 0.7187  Val Acc: 74.26%  LR: 0.000100
-  Epoch [13/20] Train Loss: 0.7327  Train Acc: 74.38%  Val Loss: 0.7065  Val Acc: 74.78%  LR: 0.000010
-  Epoch [20/20] Train Loss: 0.7285  Train Acc: 74.40%  Val Loss: 0.7051  Val Acc: 74.74%  LR: 0.000001
-  ```
 - **Outcome**: Reached **74.78%** validation accuracy at Epoch 13, demonstrating improved feature extraction capacity over EXP-03 on a 20-epoch schedule.
 
 ---
