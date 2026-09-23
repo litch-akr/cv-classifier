@@ -1,0 +1,19 @@
+{
+    "checkpoint": "best_resnet18_cifar32_discriminative.pth",
+    "checkpoint_epoch": 12,
+    "checkpoint_validation_accuracy": 0.9172,
+    "validation": {
+        "accuracy": 0.9172,
+        "macro_precision": 0.917708059324703,
+        "macro_recall": 0.9174264976595257,
+        "macro_f1": 0.9170287810550072,
+        "weighted_f1": 0.9174864649428797
+    },
+    "test": {
+        "accuracy": 0.9154,
+        "macro_precision": 0.9166354456602491,
+        "macro_recall": 0.9154000000000002,
+        "macro_f1": 0.9155077569549162,
+        "weighted_f1": 0.9155077569549163
+    }
+}

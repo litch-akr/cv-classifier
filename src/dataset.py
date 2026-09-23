@@ -12,13 +12,19 @@ def get_dataloaders(batch_size=128):
         transforms.RandomHorizontalFlip(),
         transforms.RandomCrop(32, padding=4),
         transforms.ToTensor(),
-        transforms.Normalize(CIFAR10_MEAN, CIFAR10_STD),
-    ])
-    eval_transform = transforms.Compose([
-        transforms.ToTensor(),
-        transforms.Normalize(CIFAR10_MEAN, CIFAR10_STD),
+        transforms.Normalize(
+            mean=(0.485, 0.456, 0.406),
+            std=(0.229, 0.224, 0.225)
+        ),
     ])
 
+    eval_transform = transforms.Compose([
+        transforms.ToTensor(),
+        transforms.Normalize(
+            mean=(0.485, 0.456, 0.406),
+            std=(0.229, 0.224, 0.225)
+        ),
+    ])
     train_full = datasets.CIFAR10(
         root="./data",
         train=True,
@@ -80,13 +86,8 @@ def get_dataloaders(batch_size=128):
 
     return train_loader, val_loader, test_loader
 if __name__ == '__main__':
-    # Initialisation des loaders
     train_loader, val_loader, test_loader = get_dataloaders()
-
-    # Récupération en toute sécurité d'un lot d'images
     images, labels = next(iter(train_loader))
-
-    # Affichages des dimensions
     print("Dimensions des images :", images.shape)
     print("Dimensions des labels :", labels.shape)
     print("Taille Dataset Entraînement :", len(train_loader.dataset))

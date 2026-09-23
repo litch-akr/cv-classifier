@@ -4,14 +4,23 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9934fd88-d51f-411a-8e84-c93904dc7b18" name="Changes" comment="finished experimenting on simple cnn" />
+    <list default="true" id="9934fd88-d51f-411a-8e84-c93904dc7b18" name="Changes" comment="finished experimenting on simple cnn">
+      <change afterPath="$PROJECT_DIR$/src/evaluate.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/train_resnet.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Readme.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/dataset.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/dataset.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resnet_model.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/resnet_model.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="EmbeddingIndexingInfo">
-    <option name="cachedIndexableFilesCount" value="23" />
+    <option name="cachedIndexableFilesCount" value="29" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -41,23 +50,23 @@
   </component>
   <component name="NextEditCompletionFeaturesState">
     <decayedCancelled>
-      <entry key="MS100" value="1.3463008695735375" />
-      <entry key="MS500" value="2.912023360615332" />
-      <entry key="S2" value="5.80901585629508" />
-      <entry key="S5" value="11.534452396009115" />
-      <entry key="S10" value="19.127411685142135" />
-      <entry key="S30" value="32.358467544736556" />
-      <entry key="S60" value="48.31727096432017" />
-      <entry key="M2" value="72.04453584660233" />
-      <entry key="M5" value="99.98897333526227" />
-      <entry key="M10" value="113.17976566762754" />
-      <entry key="M15" value="118.1360639142541" />
-      <entry key="M30" value="123.40272632964405" />
-      <entry key="H1" value="126.15871993618579" />
-      <entry key="H2" value="127.56852989992802" />
-      <entry key="H4" value="128.28153597700256" />
-      <entry key="D1" value="128.87987513699835" />
-      <entry key="W1" value="128.98282995409704" />
+      <entry key="MS100" value="1.0163585191538933" />
+      <entry key="MS500" value="2.315524433765676" />
+      <entry key="S2" value="5.292024503752031" />
+      <entry key="S5" value="6.793369947621865" />
+      <entry key="S10" value="8.626773455287864" />
+      <entry key="S30" value="19.2998233478875" />
+      <entry key="S60" value="28.652067201884854" />
+      <entry key="M2" value="35.990649568089694" />
+      <entry key="M5" value="44.438954617786614" />
+      <entry key="M10" value="62.77037006377837" />
+      <entry key="M15" value="80.46858930338333" />
+      <entry key="M30" value="113.34498772092981" />
+      <entry key="H1" value="139.3425561458003" />
+      <entry key="H2" value="155.7630941789227" />
+      <entry key="H4" value="165.00075100471122" />
+      <entry key="D1" value="173.277937450366" />
+      <entry key="W1" value="174.75259565626467" />
     </decayedCancelled>
     <decayedSelected>
       <entry key="MS100" value="0.0" />
@@ -79,23 +88,23 @@
       <entry key="W1" value="0.0" />
     </decayedSelected>
     <decayedShown>
-      <entry key="MS100" value="1.2797654348997065" />
-      <entry key="MS500" value="2.886149734952022" />
-      <entry key="S2" value="5.796341869534057" />
-      <entry key="S5" value="11.524462826990101" />
-      <entry key="S10" value="19.119174643714825" />
-      <entry key="S30" value="32.35377531621655" />
-      <entry key="S60" value="48.313618757424884" />
-      <entry key="M2" value="72.04171135257995" />
-      <entry key="M5" value="99.98736938008336" />
-      <entry key="M10" value="113.1788514660472" />
-      <entry key="M15" value="118.13542631196964" />
-      <entry key="M30" value="123.40239257437501" />
-      <entry key="H1" value="126.15854914474681" />
-      <entry key="H2" value="127.56844350302659" />
-      <entry key="H4" value="128.28149252536184" />
-      <entry key="D1" value="128.87986785964475" />
-      <entry key="W1" value="128.98282891360446" />
+      <entry key="MS100" value="0.9818331331693105" />
+      <entry key="MS500" value="2.300821688081127" />
+      <entry key="S2" value="5.283905577414653" />
+      <entry key="S5" value="6.789194859463396" />
+      <entry key="S10" value="8.622514520435425" />
+      <entry key="S30" value="19.286350321908728" />
+      <entry key="S60" value="28.638249302615645" />
+      <entry key="M2" value="35.98067459388567" />
+      <entry key="M5" value="44.43392708681484" />
+      <entry key="M10" value="62.76753313351939" />
+      <entry key="M15" value="80.466561356581" />
+      <entry key="M30" value="113.34386363243142" />
+      <entry key="H1" value="139.34195345888713" />
+      <entry key="H2" value="155.76278033051037" />
+      <entry key="H4" value="165.00059060244246" />
+      <entry key="D1" value="173.27791020054028" />
+      <entry key="W1" value="174.75259175033858" />
     </decayedShown>
   </component>
   <component name="ProjectColorInfo">{
@@ -111,7 +120,9 @@
   "keyToString": {
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "Python.dataset.executor": "Run",
+    "Python.evaluate.executor": "Run",
     "Python.model.executor": "Run",
+    "Python.resnet_model.executor": "Run",
     "Python.train.executor": "Run",
     "RunOnceActivity.MCP Project settings loaded": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
@@ -122,6 +133,7 @@
     "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
     "git-widget-placeholder": "master",
     "junie.onboarding.icon.badge.shown": "true",
+    "junie.plugin.stays.banner.dismissed": "true",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -150,7 +162,10 @@
       <workItem from="1788746075585" duration="5916000" />
       <workItem from="1788915385541" duration="8810000" />
       <workItem from="1789004649466" duration="10820000" />
-      <workItem from="1789037955692" duration="1790000" />
+      <workItem from="1789037955692" duration="5072000" />
+      <workItem from="1789045187709" duration="6537000" />
+      <workItem from="1789126131178" duration="2807000" />
+      <workItem from="1790131443607" duration="1156000" />
     </task>
     <task id="LOCAL-00001" summary="init project">
       <option name="closed" value="true" />
@@ -184,7 +199,15 @@
       <option name="project" value="LOCAL" />
       <updated>1789040846124</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="finished experimenting on simple cnn">
+      <option name="closed" value="true" />
+      <created>1789040969864</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1789040969864</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -209,7 +232,9 @@
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/cv_classifier$model.coverage" NAME="model Coverage Results" MODIFIED="1789029860300" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
+    <SUITE FILE_PATH="coverage/cv_classifier$evaluate.coverage" NAME="evaluate Coverage Results" MODIFIED="1790131507799" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
     <SUITE FILE_PATH="coverage/cv_classifier$dataset.coverage" NAME="dataset Coverage Results" MODIFIED="1789033584973" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
+    <SUITE FILE_PATH="coverage/cv_classifier$resnet_model.coverage" NAME="resnet_model Coverage Results" MODIFIED="1789041129733" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
     <SUITE FILE_PATH="coverage/cv_classifier$train.coverage" NAME="train Coverage Results" MODIFIED="1789034229415" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
   </component>
 </project>
